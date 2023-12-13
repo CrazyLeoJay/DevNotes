@@ -1,0 +1,11 @@
+FROM node:20
+
+LABEL description="A demo Dockerfile for build Docsify."
+WORKDIR /docs
+RUN npm config set registry http://registry.npmmirror.com
+# https://github.com/docsifyjs/docsify-cli
+RUN npm install -g docsify-cli@latest
+
+EXPOSE 3000/tcp
+
+ENTRYPOINT docsify serve www --port 3000
