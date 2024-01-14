@@ -10,6 +10,7 @@
 
 <!-- --- -->
 <!-- 
+
 * [插件](contents/plugins)
 * [部署](contents/production)
 * [表情包](contents/emoji) -->
@@ -25,4 +26,15 @@
 
 * C++
   * [CMake](cxx\Cmake.md)
+  *  [AndroidNdk笔记](cxx\AndroidNdk笔记.md) 
 
+- Gradle
+  -  [常用依赖记录](gradle\常用依赖记录.md) 
+
+
+
+- `IPCamera` 研究记录
+  - [Onvif协议.md](ipcamera\Onvif协议.md) 
+  - [Onvif协议研究](ipcamera\Onvif协议研究.md)
+  - [发现服务-Web服务动态发现协议](ipcamera\Web服务动态发现协议.md) 
+  - 
