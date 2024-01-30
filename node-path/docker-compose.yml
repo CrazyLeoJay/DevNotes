@@ -16,6 +16,7 @@ services:
     build: 
       # dockerfile: dockerfile-nodejs
       dockerfile: dockerfile
+    restart: always
     ports:
       - "3000:3000"
     volumes:
