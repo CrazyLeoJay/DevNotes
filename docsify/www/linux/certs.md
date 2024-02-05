@@ -297,6 +297,8 @@ changeit
 ## ubuntu 安装证书
 
 ```sh
+$apt install ca-certificates -y
+
 # 首先，复制pem格式的根证书，重命名为 .crt格式
 # 然后，执行下边的命令
 $sudo cp 证书路径.crt /usr/local/share/ca-certificates
@@ -308,4 +310,74 @@ $sudo update-ca-certificates
 $sudo rm -f /usr/local/share/ca-certificates/证书名称.crt
 $sudo update-ca-certificates
 ```
+
+
+
+## docker 证书配置
+
+> 如果搭建docker register 使用自建证书，则需要在服务端和客户端都要配置
+
+服务端：Ubuntu＋nexus3-docker
+
+客户端：docker
+
+
+
+### 服务端配置
+
+- 首先服务器配置
+- 然后Nexus3导入证书
+
+
+
+
+
+### 客户端配置
+
+[官文：Verify repository client with certificates](https://docs.docker.com/engine/security/certificates/#understand-the-configuration)
+
+需要找到配置目录[Docker Daemon 配置](https://docs.docker.com/config/daemon/)，没有目录就创建一个
+
+- linux：`/etc/docker/certs.d`
+- win:  `C:\Users\{username}\.docker\certs.d` (未验证)
+- mac：`~/.config/docker/certs.d` （未验证）
+
+在目录　`certs.d`  下建立一个目录用来存放证书，这个目录的命名为 register服务器的域名全名，不支持通配符。
+
+标准格式为：
+
+```sh
+ /etc/docker/certs.d/        <-- Certificate directory
+    └── localhost:5000          <-- Hostname:port
+       ├── client.cert          <-- Client certificate
+       ├── client.key           <-- Client key
+       └── ca.crt               <-- Root CA that signed
+                                    the registry certificate, in PEM
+```
+
+假设仓库地址为`my-https.registry.example.com`，则：
+
+```sh
+/etc/docker/certs.d/
+	└── my-https.registry.example.com          <-- Hostname without port
+       ├── client.cert
+       ├── client.key
+       └── ca.crt
+```
+
+放入服务端证书和key，然后放入中间证书或者root证书。这里需要证书名字**必须为`crt`或者`cert`**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
