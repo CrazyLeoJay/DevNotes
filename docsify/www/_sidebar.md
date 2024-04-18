@@ -7,12 +7,14 @@
 * C++
   * [CMake](cxx\Cmake.md)
   *  [AndroidNdk笔记](cxx\AndroidNdk笔记.md) 
+  *   [C++_笔记](cxx\cxx_notes.md) 
+  
+  
 
 - Gradle
   -  [常用依赖记录](gradle\常用依赖记录.md)
   -   [init配置](gradle\init配置.md) 
   -   [JVM项目常用配置](gradle\JVM项目常用配置.md) 
-  -  
 
 
 
@@ -21,7 +23,9 @@
   - [Onvif协议研究](ipcamera\Onvif协议研究.md)
   - [发现服务-Web服务动态发现协议](ipcamera\Web服务动态发现协议.md) 
   -   [Onvif调起视频流](ipcamera\Onvif调起视频流.md) 
-  -  
+
+
+
 - 协议(Protocol)
   -  [RTSP](protocol\RTSP.md) 
   -   [SDP](protocol\SDP.md) 
@@ -40,3 +44,10 @@
   * 手游Apk包构建服务
   * [构建服务设计](./)
   * 配套插件
+
+
+
+-  [二进制开源项目学习记录](bin_project\READ.md) 
+  -  [x264_configure_help](bin_project\x264_configure_help.md) 
+  -  [x264_err](bin_project\x264_err.md) 
+  -  [ffmpeg_configure_help](bin_project\ffmpeg_configure_help.md) 

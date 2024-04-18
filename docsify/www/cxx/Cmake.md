@@ -64,6 +64,38 @@ add_executable(${PROJECT_NAME} main.cpp)
 > **include_directories**用来指定编译器搜索头文件的路径。当你在代码中使用#include <header.h>的方式来包含头文件时，编译器会在include_directories指定的路径中查找头文件。也就是说，当我们将其设置为我们下载库的include文件夹后，在我们的项目中我们可以直接以头文件的名字include外部库的头文件，不需要以路径的形式引入了。
 >
 > **link_directories**用来指定编译器搜索库文件的路径。当你在代码中使用target_link_libraries()来链接库文件时，编译器会在link_directories指定的路径中查找库文件。也就是说，当我们将其设置为我们下载库的lib文件夹后，链接时就会在指定外部库的lib文件中寻找对于的.a静态库或者.so动态库。
+>
+> 
+
+库添加规则：
+
+```cmake
+# 这个方法设置库所在的目录，后面才能通过这个目录找到静态或者动态文件所在
+link_directories()
+# 通过 link_libraries 这个方法检索获取库文件
+link_libraries()
+
+# 这个方法需要放在 add_executable 或者 add_library 之后，这样可以给指定配置添加指定的库
+target_link_libraries()
+# 例如下面这个配置给一个 主exe配置添加 SDL2的库
+add_executable(${PROJECT_NAME} main.cpp ...)
+target_link_libraries(${PROJECT_NAME} SDL2)
+```
+
+例如导入ffmpeg:（假设已经设置了FFMPEG_HOME）
+
+```cmake
+include_directories("${FFMPEG_HOME}/include")
+link_directories("${FFMPEG_HOME}/lib")
+# 通过 set 可以讲多个目标集合成一个参数
+set(LINK_LIBRARY swscale swresample avcodec avutil avdevice avfilter avformat)
+# 所有库都需要添加 ffmpeg
+link_libraries(${LINK_LIBRARY})
+```
+
+
+
+
 
 ```cmake
 # CMake 最低版本号要求
@@ -166,4 +198,57 @@ add_executable(Demo main.cc)
 # 添加链接库
 target_link_libraries(Demo MathFunctions)
 ```
+
+
+
+# cmake_parse_arguments
+
+> function 或者 macro 多参数传入
+>
+> 参考：https://blog.csdn.net/fengbingchun/article/details/127154655
+
+密令格式：
+
+```cmake
+
+cmake_parse_arguments(<prefix> <options> <one_value_keywords> <multi_value_keywords> <args>...)
+ 
+# 只能在function下使用。表示从第N个数据开始解析
+cmake_parse_arguments(PARSE_ARGV <N> <prefix> <options> <one_value_keywords> <multi_value_keywords>)
+
+```
+
+
+
+```cmake
+macro(FUN_NAME)
+    set(prefix FUNC1)
+    set(options CSDN GITHUB)
+    set(one_value_keywords DESTINATION)
+    set(multi_value_keywords FILES RES)
+
+    # ARGN:包含命名参数和可选参数的变量列表
+    cmake_parse_arguments(${prefix} "${options}" "${one_value_keywords}" "${multi_value_keywords}" ${ARGN})
+endmacro()
+
+function(FUN_NAME)
+    set(prefix FUNC1)
+    set(options CSDN GITHUB)
+    set(one_value_keywords DESTINATION)
+    set(multi_value_keywords FILES RES)
+
+    # ARGN:包含命名参数和可选参数的变量列表
+    cmake_parse_arguments(${prefix} "${options}" "${one_value_keywords}" "${multi_value_keywords}" ${ARGN})
+endfunction()
+
+FUN_NAME(FILES test.cpp main.cpp DESTINATION /usr/lib CSDN config DEBUG)
+```
+
+
+
+可以获取到参数：
+
+- FUNC1_CSDN、FUNC1_GITHUB： 这些值类似于布尔值，判断参数中是否有 CSDN 和 GITHUB 这些值存在，返回TRUE和FALSE
+- FUNC1_DESTINATION：获取DESTINATION标记下的值，单仅获取一个值，其余值
+- FUNC!1_FILES、FUNC!1_RES：获取 FILES 或者 RES 后的所有值
 
