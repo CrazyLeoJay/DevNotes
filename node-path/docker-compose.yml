@@ -1,17 +1,16 @@
 version: '3.4'
 
 services:
-  # nginx:
-  #   image: nginx:1.21.6
-  #   # restart: on-failure
-  #   restart: always
-  #   ports: 
-  #     - "9090:80"
-  #     # - "9443:443"
-  #   volumes: 
-  #     - ./nginx.conf:/etc/nginx/nginx.conf
-  #     - ./docsify:/web
-  #     #- ../volume/nginx/cert:/cert
+  nginx-docsify:
+    image: nginx:1.21.6
+    restart: always
+    ports: 
+      - "3001:80"
+      # - "9443:443"
+    volumes: 
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ../docsify:/web
+      #- ../volume/nginx/cert:/cert
   node-docsify:
     build: 
       # dockerfile: dockerfile-nodejs
@@ -19,6 +18,7 @@ services:
     restart: always
     ports:
       - "3000:3000"
+      - "35729:35729"
     volumes:
       - ../docsify:/docs
 
