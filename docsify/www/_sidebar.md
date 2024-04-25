@@ -6,10 +6,13 @@
 
 * C++
   * [CMake](cxx\Cmake.md)
+  *  [cmake_指令记录](cxx\cmake_指令记录.md) 
+  *  [cxx_libs](cxx\cxx_libs.md) 
   *  [AndroidNdk笔记](cxx\AndroidNdk笔记.md) 
-  *   [C++_笔记](cxx\cxx_notes.md) 
+  *  [C++_笔记](cxx\cxx_notes.md) 
   
-  
+
+
 
 - Gradle
   -  [常用依赖记录](gradle\常用依赖记录.md)
@@ -34,8 +37,9 @@
 - Linux
   -  [certs](linux\certs.md) 
   -  [iptables](linux\iptables.md) 
-  - 
-
+  -  [网络配置](linux\network.md) 
+- 
+  
 - Docker
   - [Docker remote 设置](docker\DockerRemote.md) 
   -  [nexus3-register](docker\nexus3-register.md) 
