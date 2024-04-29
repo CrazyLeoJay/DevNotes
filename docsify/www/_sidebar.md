@@ -38,6 +38,7 @@
   -  [certs](linux\certs.md) 
   -  [iptables](linux\iptables.md) 
   -  [网络配置](linux\network.md) 
+  -   [嵌入式linux命令](linux\嵌入式linux命令.md) 
 - 
   
 - Docker
