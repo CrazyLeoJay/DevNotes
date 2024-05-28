@@ -10,6 +10,7 @@
   *  [cxx_libs](cxx\cxx_libs.md) 
   *  [AndroidNdk笔记](cxx\AndroidNdk笔记.md) 
   *  [C++_笔记](cxx\cxx_notes.md) 
+  *   [signal_信号监听记录](cxx\signal_help.md) 
   
 
 
@@ -26,6 +27,7 @@
   - [Onvif协议研究](ipcamera\Onvif协议研究.md)
   - [发现服务-Web服务动态发现协议](ipcamera\Web服务动态发现协议.md) 
   -   [Onvif调起视频流](ipcamera\Onvif调起视频流.md) 
+  -   [RTSP服务开源项目记录 ](ipcamera\rtsp_servers.md) 
 
 
 
@@ -39,6 +41,7 @@
   -  [iptables](linux\iptables.md) 
   -  [网络配置](linux\network.md) 
   -   [嵌入式linux命令](linux\嵌入式linux命令.md) 
+  -    [hisilicon 海思芯片命令记录](linux\hisilicon_sh.md) 
 - 
   
 - Docker
@@ -62,3 +65,6 @@
   -  [x264_configure_help](bin_project\x264_configure_help.md) 
   -  [x264_err](bin_project\x264_err.md) 
   -  [ffmpeg_configure_help](bin_project\ffmpeg_configure_help.md) 
+
+- Python与机器学习
+  - [环境搭建Anaconda](py/环境搭建Anaconda.md)

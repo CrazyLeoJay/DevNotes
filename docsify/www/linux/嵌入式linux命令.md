@@ -28,11 +28,29 @@ mount -o vers=4 10.3.3.6:/volume1/nfs_work /mnt
 
 
 
-
-
 ## 键入式板端命令：
 
 ```sh
 mount -o vers=4 10.3.3.6:/volume1/nfs_work /mnt
+```
+
+
+
+## 查看系统日志
+
+```sh
+dmesg
+```
+
+
+
+## 查看设备芯片型号
+
+
+
+```sh
+cat /proc/device-tree/model
+# or
+cat /proc/cpuinfo
 ```
 
