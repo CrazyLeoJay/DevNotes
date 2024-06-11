@@ -252,3 +252,68 @@ FUN_NAME(FILES test.cpp main.cpp DESTINATION /usr/lib CSDN config DEBUG)
 - FUNC1_DESTINATION：获取DESTINATION标记下的值，单仅获取一个值，其余值
 - FUNC!1_FILES、FUNC!1_RES：获取 FILES 或者 RES 后的所有值
 
+
+
+## Function 使用记录
+
+### 函数cmake_parse_arguments
+
+> 通过这个函数，可以使方法传入一些特定参数
+
+```cmake
+function(my_parse_arguments)
+    # 定义参数的名称和选项
+    set(options BUILD_TESTS)
+    set(oneValueArgs LIBRARY_DIRS)
+    set(multiValueArgs INCLUDE_DIRS)
+
+    # 解析命令行参数
+    cmake_parse_arguments(ARGS "${options}" "${oneValueArgs}" "${multiValueArgs}"${ARGN})
+    
+    ...
+endfunction()
+```
+
+参数解析
+
+- ARGS：在所有参数的前缀
+- options：可选参数，判断函数入参中是否存在该函数
+- oneValueArgs：单选参数，在方法中指定Key只能有一个值。
+- multiValueArgs：多选参数，在方法中指定key，可以携带多个参数。
+
+文档例子：
+
+```cmake
+macro(my_install)
+    set(options OPTIONAL FAST)
+    set(oneValueArgs DESTINATION RENAME)
+    set(multiValueArgs TARGETS CONFIGURATIONS)
+    cmake_parse_arguments(MY_INSTALL "${options}" "${oneValueArgs}"
+                          "${multiValueArgs}" ${ARGN} )
+
+    # ...
+endmacro()
+
+# use
+my_install(TARGETS foo bar DESTINATION bin OPTIONAL blub CONFIGURATIONS)
+```
+
+
+
+会产生以下Key和这些Key的指代
+
+- MY_INSTALL_OPTIONAL = TRUE
+- MY_INSTALL_FAST = FALSE # was not used in call to my_install
+- MY_INSTALL_DESTINATION = "bin"
+- MY_INSTALL_RENAME <UNDEFINED> # was not used
+- MY_INSTALL_TARGETS = "foo;bar"
+- MY_INSTALL_CONFIGURATIONS <UNDEFINED> # was not used
+- MY_INSTALL_UNPARSED_ARGUMENTS = "blub" # nothing expected after "OPTIONAL"
+- MY_INSTALL_KEYWORDS_MISSING_VALUES = "CONFIGURATIONS"
+
+
+
+         # No value for "CONFIGURATIONS" given
+
+
+
