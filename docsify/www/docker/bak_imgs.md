@@ -14,5 +14,7 @@ $ docker tag [当前镜像名]:[当前标签] [新的镜像名]:[新的标签]
 $ docker tag sonatype/nexus3:3.69.0-java17 hub.leojay.site/sonatype/nexus3:3.69.0-java17
 $ docker push hub.leojay.site/sonatype/nexus3:3.69.0-java17
 $ docker pull hub.leojay.site/sonatype/nexus3:3.69.0-java17
+
+docker tag sonatype/nexus3:3.69.0 hub.leojay.site/sonatype/nexus3:3.69.0
 ```
 
