@@ -4,6 +4,15 @@
 
 
 
+- [AI LLM](ai_llm) 
+
+
+
+- Jvm 服务端开发
+  -  [elastic 相关配置和部署](jvm_services\elastic.md) 
+
+
+
 * C++
   * [CMake](cxx\Cmake.md)
   *  [cmake_指令记录](cxx\cmake_指令记录.md) 
@@ -75,3 +84,6 @@
 
 - Python与机器学习
   - [环境搭建Anaconda](py/环境搭建Anaconda.md)
+
+- AI 游戏-玩家
+  -  [开发前调研](aigame\before.md) 
