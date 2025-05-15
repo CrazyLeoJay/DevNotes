@@ -4,7 +4,7 @@
 
 
 
-- [AI LLM](ai_llm) 
+- [AI LLM](ai_llm/README) 
 
 
 ---
@@ -15,59 +15,59 @@
 
 
 - Jvm 服务端开发
-  -  [elastic 相关配置和部署](jvm_services\elastic.md) 
+  -  [elastic 相关配置和部署](jvm_services/elastic.md) 
 
 
 * C++
-  * [CMake](cxx\Cmake.md)
-  *  [cmake_指令记录](cxx\cmake_指令记录.md) 
-  *  [cxx_libs](cxx\cxx_libs.md) 
-  *  [AndroidNdk笔记](cxx\AndroidNdk笔记.md) 
-  *  [C++_笔记](cxx\cxx_notes.md) 
-  *   [signal_信号监听记录](cxx\signal_help.md) 
+  * [CMake](cxx/Cmake.md)
+  *  [cmake_指令记录](cxx/cmake_指令记录.md) 
+  *  [cxx_libs](cxx/cxx_libs.md) 
+  *  [AndroidNdk笔记](cxx/AndroidNdk笔记.md) 
+  *  [C++_笔记](cxx/cxx_notes.md) 
+  *   [signal_信号监听记录](cxx/signal_help.md) 
   
 
 
 
 - Gradle
-  -  [常用依赖记录](gradle\常用依赖记录.md)
-  -   [init配置](gradle\init配置.md) 
-  -   [JVM项目常用配置](gradle\JVM项目常用配置.md) 
+  -  [常用依赖记录](gradle/常用依赖记录.md)
+  -   [init配置](gradle/init配置.md) 
+  -   [JVM项目常用配置](gradle/JVM项目常用配置.md) 
 
 
 
 - `IPCamera` 研究记录
-  - [Onvif协议](ipcamera\Onvif协议.md) 
-  - [Onvif协议研究](ipcamera\Onvif协议研究.md)
-  - [发现服务-Web服务动态发现协议](ipcamera\Web服务动态发现协议.md) 
-  -   [Onvif调起视频流](ipcamera\Onvif调起视频流.md) 
-  -   [RTSP服务开源项目记录 ](ipcamera\rtsp_servers.md) 
+  - [Onvif协议](ipcamera/Onvif协议.md) 
+  - [Onvif协议研究](ipcamera/Onvif协议研究.md)
+  - [发现服务-Web服务动态发现协议](ipcamera/Web服务动态发现协议.md) 
+  -   [Onvif调起视频流](ipcamera/Onvif调起视频流.md) 
+  -   [RTSP服务开源项目记录 ](ipcamera/rtsp_servers.md) 
 
 
 
 - 协议(Protocol)
-  -  [wieshark_命令记录](protocol\wieshark_命令记录.md) 
-  - [RTSP](protocol\RTSP.md) 
-  - [SDP](protocol\SDP.md) 
-  - [RTP](protocol\RTP.md) 
-  - [RTCP](protocol\RTCP.md) 
+  -  [wieshark_命令记录](protocol/wieshark_命令记录.md) 
+  - [RTSP](protocol/RTSP.md) 
+  - [SDP](protocol/SDP.md) 
+  - [RTP](protocol/RTP.md) 
+  - [RTCP](protocol/RTCP.md) 
 - Linux
-  -  [certs](linux\certs.md) 
-  -  [iptables](linux\iptables.md) 
-  -  [网络配置](linux\network.md) 
-  -  [嵌入式linux命令](linux\嵌入式linux命令.md) 
-  -  [hisilicon 海思芯片命令记录](linux\hisilicon_sh.md) 
+  -  [certs](linux/certs.md) 
+  -  [iptables](linux/iptables.md) 
+  -  [网络配置](linux/network.md) 
+  -  [嵌入式linux命令](linux/嵌入式linux命令.md) 
+  -  [hisilicon 海思芯片命令记录](linux/hisilicon_sh.md) 
   - ubuntu
     - [dpkg命令](linux/ubuntu/dpkg.md)
     - [创建桌面启动方式（.desktop 文件）](linux/ubuntu/desktop_icon.md)
 
 
 - Docker
-  - [Docker remote 设置](docker\DockerRemote.md) 
-  -  [nexus3-register](docker\nexus3-register.md) 
-  -   [镜像备份到自己服务器](docker\bak_imgs.md) 
-  -    [dockerfile 二进制库安装记录](docker\install_recode.md) 
-  -    [去除管理员限制](docker_remove_sudo.md) 
+  - [Docker remote 设置](docker/DockerRemote.md) 
+  - [nexus3-register](docker/nexus3-register.md) 
+  - [镜像备份到自己服务器](docker/bak_imgs.md) 
+  - [dockerfile 二进制库安装记录](docker/install_recode.md) 
+  - [去除管理员限制](docker/docker_remove_sudo.md) 
 
 
 
@@ -82,14 +82,14 @@
 
 
 
--  [二进制开源项目学习记录](bin_project\READ.md) 
-  -  [x264_configure_help](bin_project\x264_configure_help.md) 
-  -  [x264_err](bin_project\x264_err.md) 
-  -  [ffmpeg_configure_help](bin_project\ffmpeg_configure_help.md) 
+-  [二进制开源项目学习记录](bin_project/READ.md) 
+  -  [x264_configure_help](bin_project/x264_configure_help.md) 
+  -  [x264_err](bin_project/x264_err.md) 
+  -  [ffmpeg_configure_help](bin_project/ffmpeg_configure_help.md) 
 
 - Python与机器学习
   - [环境搭建Anaconda](py/环境搭建Anaconda.md)
 
 - AI 游戏-玩家
-  -  [开发前调研](aigame\before.md) 
+  -  [开发前调研](aigame/before.md) 
 
