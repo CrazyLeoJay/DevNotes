@@ -6,6 +6,17 @@
 
 
 
+## 文档
+
+- [Dart 文档](https://dart.cn/docs/)
+- [Flutter 文档](https://docs.flutter.cn/)
+
+
+
+
+
+
+
 ## download
 
 https://storage.flutter-io.cn/flutter_infra_release/releases/stable/windows/flutter_windows_3.24.3-stable.zip
@@ -91,4 +102,33 @@ flutter doctor -v
 
 
 找到安装目录下 `packages\flutter_tools\lib\src\http_host_validator.dart`文件，替换源
+
+
+
+## [选配] Dart环境变量配置
+
+如果使用全局配置，直接使用脚本
+
+执行命令
+
+```sh
+$ dart pub global activate webdev
+$ webdev serve
+-bash: webdev: command not found
+```
+
+
+
+需要将路径添加入环境变量 PATH
+
+> 由于是用户目录，建议添加入用户的PATH
+
+```path
+C:\Users\{{USERNAME}}\AppData\Local\Pub\Cache\bin
+```
+
+| Platform       | Cache location                 |
+| -------------- | ------------------------------ |
+| macOS or Linux | `$HOME/.pub-cache/bin`         |
+| Windows*****   | `%LOCALAPPDATA%\Pub\Cache\bin` |
 

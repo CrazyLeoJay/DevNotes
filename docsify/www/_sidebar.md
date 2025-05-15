@@ -7,10 +7,15 @@
 - [AI LLM](ai_llm) 
 
 
+---
+
+- [网站开发](/web_site/README) 
+
+---
+
 
 - Jvm 服务端开发
   -  [elastic 相关配置和部署](jvm_services\elastic.md) 
-
 
 
 * C++
@@ -87,3 +92,4 @@
 
 - AI 游戏-玩家
   -  [开发前调研](aigame\before.md) 
+
