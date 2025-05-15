@@ -1,7 +1,7 @@
 FROM hub.leojay.site/dhub/nginx:1.27.0
 
 ADD nginx.conf /etc/nginx/nginx.conf
-ADD docsify /web
+ADD www /web
 
 EXPOSE 80
 

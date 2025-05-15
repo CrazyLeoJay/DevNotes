@@ -7,19 +7,20 @@ services:
       # - "9443:443"
     volumes: 
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/docsify:/web
+      - ../docs:/web/www
       #- ../volume/nginx/cert:/cert
 
-  # node-docsify:
-  #   build: 
-  #     # dockerfile: dockerfile-nodejs
-  #     dockerfile: dockerfile
-  #   restart: always
-  #   ports:
-  #     - "3000:3000"
-  #     - "35729:35729"
-  #   volumes:
-  #     - ../docsify:/docs
+  node-docsify:
+    build: 
+      context: node
+      # dockerfile: dockerfile-nodejs
+      dockerfile: dockerfile
+    restart: always
+    ports:
+      - "3000:3000"
+      - "35729:35729"
+    volumes:
+      - ../docs:/docs
 
     
       

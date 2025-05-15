@@ -5,7 +5,7 @@ pwd
 group=services_docsify
 img=nginx-docsify
 
-cp -r docsify node-path/nginx
+# cp -r docs/ node-path/nginx/www/
 
 docker compose -f node-path/docker-compose.yml -p $group down $img
 # docker compose -f node-path/docker-compose.yml -p $group build $img
